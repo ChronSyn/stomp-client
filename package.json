@@ -1,0 +1,123 @@
+{
+  "name": "@openrailuk/stomp-client",
+  "version": "1.0.1",
+  "displayName": "Open Rail UK STOMP Client",
+  "description": "A stomp client used for accessing National Rail UK Datafeeds",
+  "license": "MIT",
+  "icon": "",
+  "main": "index",
+  "module": "index.mjs",
+  "homepage": "https://openrail.gitlab.io",
+  "keywords": [
+    "openrail",
+    "openrailuk",
+    "national",
+    "rail",
+    "stomp",
+    "client"
+  ],
+  "author": "Steven Collins <steven@carboncollins.uk>",
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp",
+    "eslint": "./node_modules/.bin/eslint",
+    "lint": "eslint ./src/**.mjs",
+    "test": "mocha ./tests/test.all.js",
+    "coverage": "./node_modules/.bin/nyc -x \"**/lib/es6/**/*.js\" -x \"**/src/**/*.js\" -x \"**/tests/**/*.js\" -x \"gulpfile.js\" --reporter=\"text-summary\" --reporter=\"lcov\" mocha \"./tests/test.all.js\" --reporter=\"mochawesome\"",
+    "build": "gulp build",
+    "build:common": "gulp build:common",
+    "build:es6": "gulp build:es6",
+    "build:quality": "gulp build:quality",
+    "build:docs": "gulp build:docs",
+    "clean": "gulp clean:lib",
+    "clean:common": "gulp clean:lib:common",
+    "clean:es6": "gulp clean:lib:es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/openrail/uk/stomp-client-nodejs"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/openrail/uk/stomp-client-nodejs/issues"
+  },
+  "badges": [
+    {
+      "description": "license",
+      "href": "https://img.shields.io/badge/license-MIT-blue.svg",
+      "url": "https://gitlab.com/openrail/uk/common-nodejs/blob/master/LICENSE.txt"
+    },
+    {
+      "description": "country",
+      "href": "https://img.shields.io/badge/country-UK-blue.svg",
+      "url": "https://gitlab.com/openrail/uk"
+    },
+    {
+      "description": "wip",
+      "href": "https://img.shields.io/badge/status-WIP-yellow.svg",
+      "url": "https://gitlab.com/openrail/uk/common-nodejs"
+    },
+    {
+      "description": "pipeline",
+      "href": "https://gitlab.com/openrail/uk/stomp-client-nodejs/badges/master/pipeline.svg",
+      "url": "https://gitlab.com/openrail/uk/stomp-client-nodejs/commits/master"
+    },
+    {
+      "description": "coverage",
+      "href": "https://gitlab.com/openrail/uk/stomp-client-nodejs/badges/master/coverage.svg",
+      "url": "https://gitlab.com/openrail/uk/stomp-client-nodejs/commits/master"
+    },
+    {
+      "description": "discord",
+      "href": "https://img.shields.io/discord/478848557089030144.svg",
+      "url": "https://discord.gg/N9CPKaY"
+    }
+  ],
+  "markdown": "standard",
+  "publisher": "npm",
+  "engines": {
+    "node": ">=6.x",
+    "yarn": ">=1.x"
+  },
+  "readmeFilename": "README.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "doc": "./docs",
+    "lib": "./lib",
+    "test": "./tests"
+  },
+  "dependencies": {
+    "stompit": "^0.25.0"
+  },
+  "devDependencies": {
+    "@openrail/eslint-config": "^1.4.1",
+    "@openrail/renovate-config": "^1.0.11",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "babel-preset-node6": "^11.0.0",
+    "chai": "^4.1.2",
+    "diff": "^3.5.0",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^7.0.1",
+    "fs-extra": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "istanbul": "^0.4.5",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.0.3",
+    "nyc": "^12.0.2"
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "@openrail"
+      ]
+    }
+  }
+}
